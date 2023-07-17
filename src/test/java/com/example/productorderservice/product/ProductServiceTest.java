@@ -21,8 +21,7 @@ class ProductServiceTest {
 
         productService.addProduct(ProductSteps.상품등록요청_생성());
         final Long productId = 1L;
-        final UpdateProductRequest request = new UpdateProductRequest("상품 수정", 2000,
-            DiscountPolicy.NONE);
+        final UpdateProductRequest request = ProductSteps.상품수정_요청();
 
         productService.updateProduct(productId, request);
 
@@ -31,4 +30,5 @@ class ProductServiceTest {
         assertThat(productResponse.name()).isEqualTo("상품 수정");
         assertThat(productResponse.price()).isEqualTo(2000);
     }
+
 }
