@@ -1,5 +1,8 @@
-package com.example.productorderservice.product;
+package com.example.productorderservice.product.application.service;
 
+
+import com.example.productorderservice.product.application.port.ProductPort;
+import com.example.productorderservice.product.domain.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,8 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/products")
-public
-class ProductService {
+public class ProductService {
 
     private final ProductPort productPort;
 
